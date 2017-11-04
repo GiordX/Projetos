@@ -6,31 +6,31 @@ export default class FOAPP extends Component {
   render() {
     return (
       <View>
-        <Text>
+        <Text style={styles.fonteEx}>
         1- (UFMG) uma pessoa toca no piano uma tecla correspondente à nota mi e,
         em seguida, a que corresponde a sol. Pode-se afirmar que serão ouvidos dois
         sons diferentes porque as ondas sonoras correspondentes a essas notas têm:
         </Text>
 
-        <View>
+        <View style ={styles.viewResp}>
         <TouchableOpacity onPress = {()=>{alert("Você errou tente novamente!")}}>
-         <Text> a) amplitudes diferentes </Text>
+         <Text style ={styles.resps}> a) amplitudes diferentes </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress = {()=>{alert("Você acertou!")}}>
-         <Text> b) frequências diferentes </Text>
+         <Text style ={styles.resps}> b) frequências diferentes </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress = {()=>{alert("Você errou tente novamente!")}}>
-         <Text> c) intensidades diferentes </Text>
+         <Text style ={styles.resps}> c) intensidades diferentes </Text>
         </TouchableOpacity>
 
         <TouchableOpacity onPress = {()=>{alert("Você errou tente novamente!")}}>
-         <Text> d) timbres diferentes </Text> 
+         <Text style ={styles.resps}> d) timbres diferentes </Text> 
         </TouchableOpacity>
 
         <TouchableOpacity onPress = {()=>{alert("Você errou tente novamente!")}}>
-         <Text> e) velocidade de propagação diferentes </Text>
+         <Text style ={styles.resps}> e) velocidade de propagação diferentes </Text>
         </TouchableOpacity>
         </View>
 
@@ -38,3 +38,22 @@ export default class FOAPP extends Component {
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  fonteEx: {
+    fontSize:25,
+
+  },
+
+  viewResp: {
+    marginTop:30,
+
+  },
+
+  resps: {
+    fontSize:17,
+    fontWeight:'bold',
+  },
+
+}),
