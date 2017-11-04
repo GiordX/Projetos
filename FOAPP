@@ -1,3 +1,184 @@
-amcjnskdlvnoisdc
-DEUS E FIEL
+import React, { Component } from 'react';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image
+} from 'react-native';
+import { StackNavigator } from 'react-navigation'
+
+ class foapp extends Component {
+
+	static navigationOptions = ({navigation}) => ({
+		title:'Menu'
+	});
+
+  render() {
+
+    return (
+       <View style = {styles.background}>
+  <View style = {styles.quadradoAzul}></View>
+ 
+          <View style={styles.titulo}>
+
+            <Image source={require('./images/titulo.png')} style={styles.fotoTitulo}/>
+
+          </View>
+
+          <View style={styles.fotoArea}>
+      <Image source={require('./images/water.png')} style={styles.foto}/> 
+   </View>
+
+  <View style ={styles.botaoArea}>
+
+<TouchableOpacity title="Página teorias" onPress={()=> this.props.navigation.navigate('Teoria')} style={styles.botao}>
+              <Text style={styles.botaoText}>Teoria</Text> 
+            </TouchableOpacity>
+<TouchableOpacity style={styles.botao}>
+              <Text style={styles.botaoText}>Exercícios</Text> 
+            </TouchableOpacity> 
+  
+</View>
+
+ 
+
+  
+      </View>  
+    );
+  }
+}
+
+class Teoria extends Component {
+
+	static navigationOptions = ({navigation}) => ({
+		title:'Teoria'
+	});
+
+	render() {
+		return (
+
+			<View>
+				<TouchableOpacity title="Página teorias" onPress={()=> this.props.navigation.navigate('Teoria1')} style={styles.botao}>
+              <Text style={styles.botaoText}>Teoria</Text> 
+            </TouchableOpacity>
+
+			</View>
+
+
+			);
+	}
+}
+
+class Teoria1 extends Component {
+
+	static navigationOptions = ({navigation}) => ({
+		title:'Teoria1'
+	});
+
+	render() {
+		return (
+
+			<View>
+				<Text>Teoria</Text>
+			</View>
+
+
+			);
+	}
+}
+
+const Navegador = StackNavigator({
+	Home: { screen:foapp 
+
+	},
+	Teoria: {
+		screen:Teoria
+	},
+	Teoria1:{
+		screen:Teoria1
+	}
+
+});
+export default Navegador;
+
+
+
+
+
+const styles = StyleSheet.create({
+ quadradoAzul: {
+  height:24,
+  width:1000,
+  backgroundColor:'#01DFD7',
+  marginTop:-30
+},
+ background: {
+  paddingTop:30,
+  backgroundColor:'#424242',
+  flex:1
+},
+ fonteLogo: {
+  marginTop:20,
+  textAlign:'center',
+  fontWeight:'bold',
+  fontSize:24,
+  color:'white',
+  },
+ botao:{
+  
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:'#01DFD7',
+    height:80,
+    borderRadius:5,
+    margin:10
+
+},
+botaoText:{
+  color:'white',
+  fontSize:25,
+  fontWeight:'bold'
+},
+botaoArea:{
+  marginTop:40,
+ 
+  
+},
+fotoArea:{
+  marginTop:60,
+  flexDirection:'column',
+  alignItems:'center',
+  justifyContent:'center',
+  height:150
+  
+
+},
+foto:{
+  alignItems:'center',
+  height:320,
+  width:320,
+  flexDirection:'row'
+},
+fotoTitulo: {
+  alignItems:'center',
+  width:260,
+  height:60,
+  marginLeft:10,
+  justifyContent:'center',
+ 
+
+},
+titulo:{
+  height:100,
+  alignItems:'center',
+  justifyContent:'center',
+  
+}
+
+  
+});
+
+
 
