@@ -10,7 +10,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
         <Image source={require('./images/imagemteoria.png')}/>
       </View>
       <View>
-       <Text>
+       <Text style={styles.texto}>
        Podemos classificar como uma onda, qualquer perturbação ou vibração em um meio específico. As ondas produzem diversos movimentos, já que elas são formas de transmissão de energia (mecânica ou eletromagnética), como por exemplo, o movimento que ocorre quando lançamos uma pedra dentro de um rio.
 Chamamos de ondulatória a parte da física que é responsável por estudar as características e propriedades em comum dos movimentos das ondas.
 
@@ -47,6 +47,10 @@ const styles = StyleSheet.create({
     textAlign:'center',
     fontSize:16,
     fontWeight:'bold',
+  },
+  
+  texto = {
+   fontSize:12
   },
 
 });
