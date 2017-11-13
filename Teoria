@@ -1,0 +1,52 @@
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
+
+ export default class FOAPP extends Component {
+
+  render() {
+    return(
+      <View style={{paddingTop:30}}>
+        <Text style={styles.titulo}>Ondulatória</Text>
+        <Image source={require('./images/imagemteoria.png')}/>
+      </View>
+      <View>
+       <Text>
+       Podemos classificar como uma onda, qualquer perturbação ou vibração em um meio específico. As ondas produzem diversos movimentos, já que elas são formas de transmissão de energia (mecânica ou eletromagnética), como por exemplo, o movimento que ocorre quando lançamos uma pedra dentro de um rio.
+Chamamos de ondulatória a parte da física que é responsável por estudar as características e propriedades em comum dos movimentos das ondas.
+
+A onda não é capaz de se originar sozinha, visto que ela apenas faz a transferência de energia cinética de uma fonte. Portanto, fonte é o objeto ou meio capaz de criar uma onda.
+
+As ondas podem ser classificadas segundo a natureza, o tipo de vibração e quanto à direção da propagação.
+
+- Quanto à natureza:
+Ondas Mecânicas: Necessita de um meio natural para se propagar. Ex: ondas sonoras.
+Ondas Eletromagnéticas: Não precisa de um meio natural para se propagar. Ex: raio-x, ondas de rádio, luz, etc.
+
+- Quanto à direção da vibração:
+
+Ondas Transversais: Vibram perpendicularmente à propagação.
+Ondas Longitudinais: Vibram de acordo com a propagação.
+
+- Quanto à direção da propagação:
+
+Unidimensionais: Se propagam em apenas uma direção. Ex: onda de uma corda.
+Bidirecionais: Se propagam em até duas direções. Ex: onda provocada pela queda de algum material na água.
+Tridimensionais: Se propagam em todas as direções. Ex: ondas sonoras.
+
+
+       </Text>
+      </View>
+
+
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  titulo = {
+    textAlign:'center',
+    fontSize:16,
+    fontWeight:'bold',
+  },
+
+});
